@@ -76,17 +76,7 @@ int main()
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-  
-     std::ofstream MyFile("unique.txt");
-
-     // Write to the file
-     MyFile << "Files can be tricky, but it is fun enough!";
-
-     // Close the file
-     MyFile.close();
-    
-    Shader shader("shader.vs","shader.fs");
-    
+      
     
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
