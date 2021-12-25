@@ -91,6 +91,7 @@ int main()
     // first VAO
     
     CreateTringle(VAO, VBO, triangle, sizeof(triangle));
+    Shader shader("shader.vs","shader.fs");
 
     // render loop
     // -----------

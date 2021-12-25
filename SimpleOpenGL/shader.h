@@ -10,7 +10,7 @@
 #define SHADER_H
 
 #include <glad/glad.h>
-
+#include <glm/glm.hpp>
 
 #include <fstream>
 #include <iostream>
@@ -21,7 +21,8 @@ class Shader {
   public:
     unsigned int ID;
 
-    Shader(const char *vertexPath, const char *fragmentPath, const char* geometryPath = nullptr) {
+    Shader(const char *vertexPath, const char *fragmentPath,
+           const char *geometryPath = nullptr) {
 
         // 1. retrieve the vertex/fragment source code from filePath
         std::string vertexCode;
@@ -111,6 +112,13 @@ class Shader {
     void setFloat(const std::string &name, float value) const {
         glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
     }
+    void setVec2(const std::string &name, const glm::vec2 &value) const {
+        glUniform2fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]);
+    }
+    void setVec2(const std::string &name, float x, float y) const {
+        glUniform2f(glGetUniformLocation(ID, name.c_str()), x, y);
+    }
+
     // ------------------------------------------------------------------------
   private:
     // utility function for checking shader compilation/linking errors.
@@ -144,6 +152,5 @@ class Shader {
         }
     }
 };
-
 
 #endif /* shader_h */
