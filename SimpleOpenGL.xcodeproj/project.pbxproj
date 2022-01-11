@@ -11,6 +11,7 @@
 		B315D52C2712E55B0055B484 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B315D52B2712E55B0055B484 /* OpenGL.framework */; };
 		B315D52E2712E71F0055B484 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B315D52D2712E71F0055B484 /* libglfw.3.3.dylib */; };
 		B315D5302712E7860055B484 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = B315D52F2712E7860055B484 /* glad.c */; };
+		B3F32364278C2239005A5DDA /* imageLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3F32363278C2239005A5DDA /* imageLoader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		B352A98A2776A97100D4EE40 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		B3878A2B2774EC9C000B1566 /* shader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
 		B3878A2C2774ECBF000B1566 /* shader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
+		B3F32363278C2239005A5DDA /* imageLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = imageLoader.cpp; sourceTree = "<group>"; };
+		B3F32365278D45CD005A5DDA /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		B3F50D17277239A30044A1AB /* shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,10 +75,12 @@
 		B315D5222712E28F0055B484 /* SimpleOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				B3F32363278C2239005A5DDA /* imageLoader.cpp */,
 				B315D5232712E28F0055B484 /* main.cpp */,
 				B3F50D17277239A30044A1AB /* shader.h */,
 				B3878A2B2774EC9C000B1566 /* shader.vs */,
 				B3878A2C2774ECBF000B1566 /* shader.fs */,
+				B3F32365278D45CD005A5DDA /* CMakeLists.txt */,
 			);
 			path = SimpleOpenGL;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			files = (
 				B315D5242712E28F0055B484 /* main.cpp in Sources */,
 				B315D5302712E7860055B484 /* glad.c in Sources */,
+				B3F32364278C2239005A5DDA /* imageLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +214,8 @@
 					"/usr/local/dev/native_dependencies/glfw-3.3.4/include",
 					/usr/local/dev/native_dependencies/glad/include,
 					/usr/local/dev/native_dependencies/glm,
+					/usr/local/dev/native_dependencies/,
+					/usr/local/dev/native_dependencies/learnopengl,
 				);
 				LIBRARY_SEARCH_PATHS = "/usr/local/dev/native_dependencies/glfw-3.3.4/BUILD/src";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
@@ -266,6 +274,8 @@
 					"/usr/local/dev/native_dependencies/glfw-3.3.4/include",
 					/usr/local/dev/native_dependencies/glad/include,
 					/usr/local/dev/native_dependencies/glm,
+					/usr/local/dev/native_dependencies/,
+					/usr/local/dev/native_dependencies/learnopengl,
 				);
 				LIBRARY_SEARCH_PATHS = "/usr/local/dev/native_dependencies/glfw-3.3.4/BUILD/src";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
